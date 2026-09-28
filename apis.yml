@@ -1,23 +1,57 @@
 aid: biosunpharma
+
 name: Biosunpharma
+
 description: 'Biosunpharma is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
   and added to the network as a stub for full-pipeline profiling.'
+
 url: https://raw.githubusercontent.com/api-evangelist/biosunpharma/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/biosunpharma-hosts.yml
+- type: DomainSecurity
+  url: security/biosunpharma-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/biosunpharma
+  url: https://biosunpharma.com
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: No public API documentation or machine-readable contract was found on biosunpharma.com or its subdomains.
+  evidence:
+    - url: https://api.biosunpharma.com/openapi.json
+      status: 000
+    - url: https://biosunpharma.com/openapi.json
+      status: 404
+  checked: '2026-09-28'
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
